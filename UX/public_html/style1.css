@@ -1,0 +1,113 @@
+
+/* 
+    Created on : Feb 17, 2017, 6:18:33 PM
+    Author     : Jeffrey
+*/
+h1 {
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+body {
+    margin: 0;
+}
+
+ul{
+    padding-right: 30px;
+    text-align: left;
+    list-style-type: none;
+    background-color: transparent;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+
+
+/*Containers*/
+#site{
+    float: right;
+    background-image: url("NightSky_source.jpg"); 
+    height: auto;
+    width: 85%;
+    text-align: center;
+}
+#title{
+    float: top; 
+    background-color: transparent;
+    width: available;
+    /*text*/
+    color: white;
+    font-size: 25px;
+}
+#sub{
+    clear: left;
+    background-color: #f1f1f1;
+    width: available;
+    height: auto;
+    border-style: solid;
+    border-radius: 50px;
+}
+#content{
+    width: available; 
+    height: auto; 
+    background-color: transparent;
+}
+#nav{
+    float: left;
+    background-color: wheat; 
+    width: 15%; 
+    height: 100%;
+    border-style: solid;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+#block1{
+    float: none;
+    height: auto;
+    background-color: whitesmoke; 
+    border-style: solid;
+    border-radius: 50px;
+    
+}
+#vid{
+    border-radius: 100%;
+    background-image: url("NightSky_source.jpg");
+    border-style: solid;
+    border-width: 15px;
+}
+
+#header{
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    /*text*/
+    color: white;
+    text-align: center;
+    object-position: bottom;
+}
+#footer{
+    background-color: black;
+    color: white;
+}
