@@ -14,7 +14,7 @@ h2{
     font-family: "Verdana";
 }
 h3{
-    
+
 }
 h4{
     font-family: "Verdana";
@@ -41,7 +41,9 @@ li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
-
+strong{
+    color: dimgray;
+}
 
 
 /*Containers*/
@@ -94,7 +96,7 @@ li a:hover:not(.active) {
     background-color: whitesmoke; 
     border-style: solid;
     border-radius: 50px;
-    
+
 }
 #vid{
     border-radius: 100%;
