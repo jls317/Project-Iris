@@ -5,9 +5,20 @@
 */
 h1 {
     text-align: center;
+    font-size: 45px;
+    font-family: "Lucida Console";
 }
 h2{
     text-align: center;
+    font-size: 30px;
+    font-family: "Verdana";
+}
+h3{
+    
+}
+h4{
+    font-family: "Verdana";
+    color: white;
 }
 body {
     margin: 0;
@@ -26,12 +37,6 @@ li a {
     padding: 8px 16px;
     text-decoration: none;
 }
-
-li a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
 li a:hover:not(.active) {
     background-color: #555;
     color: white;
@@ -106,6 +111,29 @@ li a:hover:not(.active) {
     color: white;
     text-align: center;
     object-position: bottom;
+    font-family: "Lucida Console";
+    font-size: 20px;
+}
+#system{
+    float: left;
+    background-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*text*/
+    color: white;
+    text-align: left;
+    font-size: 12px;
+}
+#home, #home:visited {
+    background-color: #000000;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#home:hover, a:active {
+    background-color: #555;
 }
 #footer{
     background-color: black;
