@@ -1,6 +1,13 @@
 $(function () {
+    $(document).ready(function () {
+        Highcharts.setOptions({
+            global: {
+                useUTC: false
+            }
+        });
 
-    Highcharts.theme = {
+
+Highcharts.theme = {
    colors: ['#2b908f', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
       '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
    chart: {
@@ -201,63 +208,73 @@ $(function () {
 
 // Apply the theme
 Highcharts.setOptions(Highcharts.theme);
+        
 
+        Highcharts.chart('container', {
+            chart: {
+                type: 'spline',
+                animation: Highcharts.svg, // don't animate in old IE
+                marginRight: 10,
+                events: {
+                    load: function () {
 
-    Highcharts.chart('container', {
-        chart: {
-            type: 'spline',
-            inverted: true
-        },
-        title: {
-            text: 'Atmosphere Temperature by Altitude'
-        },
-        subtitle: {
-            text: 'According to the Standard Atmosphere Model'
-        },
-        xAxis: {
-            reversed: false,
+                        // set up the updating of the chart each second
+                        var series = this.series[0];
+                        setInterval(function () {
+                            var x = (new Date()).getTime(), // current time
+                                y = Math.random();
+                            series.addPoint([x, y], true, true);
+                        }, 1000);
+                    }
+                }
+            },
             title: {
-                enabled: true,
-                text: 'Altitude'
+                text: 'Live random data'
             },
-            labels: {
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150
+            },
+            yAxis: {
+                title: {
+                    text: 'Value'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
                 formatter: function () {
-                    return this.value + 'km';
+                    return '<b>' + this.series.name + '</b><br/>' +
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                        Highcharts.numberFormat(this.y, 2);
                 }
             },
-            maxPadding: 0.05,
-            showLastLabel: true
-        },
-        yAxis: {
-            title: {
-                text: 'Temperature'
+            legend: {
+                enabled: false
             },
-            labels: {
-                formatter: function () {
-                    return this.value + '°';
-                }
+            exporting: {
+                enabled: false
             },
-            lineWidth: 2
-        },
-        legend: {
-            enabled: false
-        },
-        tooltip: {
-            headerFormat: '<b>{series.name}</b><br/>',
-            pointFormat: '{point.x} km: {point.y}°C'
-        },
-        plotOptions: {
-            spline: {
-                marker: {
-                    enable: false
-                }
-            }
-        },
-        series: [{
-            name: 'Temperature',
-            data: [[0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
-                [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]]
-        }]
+            series: [{
+                name: 'Random data',
+                data: (function () {
+                    // generate an array of random data
+                    var data = [],
+                        time = (new Date()).getTime(),
+                        i;
+
+                    for (i = -19; i <= 0; i += 1) {
+                        data.push({
+                            x: time + i * 1000,
+                            y: Math.random()
+                        });
+                    }
+                    return data;
+                }())
+            }]
+        });
     });
 });
-
