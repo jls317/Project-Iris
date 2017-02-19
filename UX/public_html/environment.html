@@ -11,8 +11,7 @@ created by Jeffrey Stewart
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript" src="pressure.js"></script>
+    
 
 
     <body>
@@ -46,22 +45,27 @@ created by Jeffrey Stewart
         </div>
         <div id="header">
             <div id="system">
-                <p id="trick"></p>
+                <div id="sys_time"></div>
+                <div id="sys_temp">temp</div>
+                <div id="sys_altitude"> alt </div>
+                <div id="sys_gps"> gps </div>
             </div>
             <a href="index.html" id="home"> Project Iris </a>
 
         </div>
+        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>sys_time
         <script src="myscript.js"></script>
 
         
-
-        
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="pressure.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     </body>
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    
 
-    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+    
 
 
 </html>

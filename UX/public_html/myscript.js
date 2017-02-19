@@ -1,4 +1,5 @@
 window.onload = datetime('sys_time');
+window.onload = rtdata('sys_temp, sys_altitude, sys_gps');
 function datetime(id) {
     date = new Date;
     year = date.getFullYear();
@@ -26,4 +27,12 @@ function datetime(id) {
     document.getElementById(id).innerHTML = result;
     setTimeout('datetime("' + id + '");', '1000');
     return result;
+}
+function rtdata(){
+    //collect real time data and display to header
+    //include temperature, altitude, and gps coords.
+    //print to 'sys_data'
+    
+    
+    
 }

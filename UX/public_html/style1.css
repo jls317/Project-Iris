@@ -112,31 +112,51 @@ strong{
     /*text*/
     color: white;
     text-align: center;
-    object-position: bottom;
     font-family: "Lucida Console";
     font-size: 20px;
 }
 #system{
-    float: left;
-    background-color: black;
-    margin-left: 10px;
-    margin-right: 10px;
-    /*text*/
-    color: white;
-    text-align: left;
-    font-size: 12px;
-}
-#sys_time{
     height: 40px;
+    width: 800px;
     margin-top: 10px;
     background-color: black;
     float: left;
     color: white;
     text-align: left;
-    
-    font-size: 12px;
+    font-size: 15px;
 }
+#sys_time{
+    float: left;
+    height: 30px;
+    width: 250px;
+    margin-left: 10px;
+    background-color: black;
+}
+#sys_temp{
+    height: 30px;
+    width: 100px;
+    margin-left: 10px;
+    background-color: black;
+    float: left;
+}
+#sys_altitude{
+    height: 30px;
+    width: 100px;
+    margin-left: 10px;
+    background-color: black;
+    float: left;
+}
+#sys_gps{
+    height: 30px;
+    width: 100px;
+    margin-left: 10px;
+    background-color: black;
+    float: left;
+}
+
 #home, #home:visited {
+    float:right;
+    margin-right: 38%;
     background-color: #000000;
     color: white;
     padding: 14px 25px;
