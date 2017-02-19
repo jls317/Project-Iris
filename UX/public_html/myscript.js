@@ -1,4 +1,4 @@
-window.onload = datetime('trick');
+window.onload = datetime('sys_time');
 function datetime(id) {
     date = new Date;
     year = date.getFullYear();
@@ -25,5 +25,5 @@ function datetime(id) {
     result = '' + days[day] + ' ' + months[month] + ' ' + d + ' ' + year + ' ' + h + ':' + m + ':' + s;
     document.getElementById(id).innerHTML = result;
     setTimeout('datetime("' + id + '");', '1000');
-    return true;
+    return result;
 }

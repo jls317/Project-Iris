@@ -126,6 +126,16 @@ strong{
     text-align: left;
     font-size: 12px;
 }
+#sys_time{
+    height: 40px;
+    margin-top: 10px;
+    background-color: black;
+    float: left;
+    color: white;
+    text-align: left;
+    
+    font-size: 12px;
+}
 #home, #home:visited {
     background-color: #000000;
     color: white;
