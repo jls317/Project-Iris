@@ -1,5 +1,6 @@
 window.onload = datetime('sys_time');
 window.onload = rtdata('sys_temp, sys_altitude, sys_gps');
+window.onload = myMap();
 function datetime(id) {
     date = new Date;
     year = date.getFullYear();
@@ -28,11 +29,21 @@ function datetime(id) {
     setTimeout('datetime("' + id + '");', '1000');
     return result;
 }
-function rtdata(){
+function rtdata() {
     //collect real time data and display to header
     //include temperature, altitude, and gps coords.
-    //print to 'sys_data'
-    
-    
-    
+    //print to 'sys_data' blocks
+
+
+
 }
+
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(40.606527, -75.377582),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+      
