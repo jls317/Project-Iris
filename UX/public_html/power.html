@@ -24,25 +24,22 @@ created by Jeffrey Stewart
 
 
                 <div id="sub">
-                    <h3> Information </h3>
-                    <p> power in, power out </p>
+                    <p class="label"> Power Produced </p>
+                    <ul><li>Solar Panel</li><p>10 Watt peak</p></ul>
+                    <p class="label"> Power Consumed </p>
+                    <ul><li>Arduino</li><p>~40 mW</p>
+                        <li>Transmitter</li><p>250 mW</p>
+                        <li>Sensors</li><p>~10 mW</p>
+                    </ul>
+                    <p class="label"> Net Power </p>
+                    <p> (10W * .4) - (40mW + 250mW + 10mW) =  +1W </p>
+                    <p> Pennsylvania receives about ~4kWh/m2/day, we cannot use
+                    peak power produced, but a percentage of it. </p>
+                    
+                        
                 </div>
 
-                <div id ="block1">
-                    <br>
-                    <h3> graphs </h3>
-                    
-                </div>
-                <div id ="block2">
-                    <br>
-                    <h3> graphs </h3>
-                    
-                </div>
-                <div id ="block3">
-                    <br>
-                    <h3> graphs </h3>
-                    
-                </div>
+                
 
 
 
@@ -70,31 +67,17 @@ created by Jeffrey Stewart
         <div id="header">
             <div id="system">
                 <div id="sys_time"></div>
-                <div id="sys_temp">temp</div>
-                <div id="sys_altitude"> alt </div>
-                <div id="sys_gps"> gps </div>
+                <div id="sys_temp"></div>
+                <div id="sys_altitude">  </div>
+                <div id="sys_gps">  </div>
             </div>
             <a href="index.html" id="home"> Project Iris </a>
 
         </div>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script type="text/javascript" src="dynamic_data_example.js"></script>
         <script src="myscript.js"></script>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-
-        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+      
 
 
-
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script type="text/javascript" src="dynamic_data_example.js"></script>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 
 
     </body>
