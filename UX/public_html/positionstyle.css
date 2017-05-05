@@ -12,14 +12,13 @@ and open the template in the editor.
     float: left;
     margin-left: 50px;
     margin-bottom: 50px;
-    border-style: solid;
+    
     height: 700px;
     width: 75%
 }
 #posinfo{
     
     float: left;
-    margin-left: 50px;
-    width: 15%;
+    width: 17%;
     height: 700px;
 }
